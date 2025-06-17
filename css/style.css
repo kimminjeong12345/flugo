@@ -81,7 +81,7 @@ body {
 
 #mainHeader li a:hover {
     color: #ccc;
-    text-decoration: underline;
+    transition: 0.3s;
 }
 
 
