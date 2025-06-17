@@ -649,6 +649,10 @@ footer {
     display: flex;
 }
 
+.footer_in li a{
+    font-weight: bold;
+}
+
 .footer_in li:nth-child(6) {
     border-right: none;
 }
