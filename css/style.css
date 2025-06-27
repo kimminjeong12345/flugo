@@ -33,7 +33,7 @@ body {
 
 /* 헤더 */
 #mainHeader {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     align-items: center;
     position: fixed;
     top: 0;
@@ -50,11 +50,44 @@ body {
 
 .header_in {
     width: 1320px;
-    margin: 30px auto;
+    margin: 20px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+/* 밑줄 */
+.header_in li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2366b3;
+    padding: 5px 0;
+}
+
+.header_in li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #2366b3;
+    transform: translateX(-50%) scaleX(0);
+    /* 중심에서 축소 상태 */
+    transform-origin: center;
+    /* 중심 기준으로 스케일 */
+    transition: transform 0.3s ease;
+}
+
+/* 밑줄 */
+
+.header_in li a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+    /* 중심에서 확장 */
+}
+
 
 .header_in ul {
     display: flex;
@@ -81,9 +114,11 @@ body {
 
 #mainHeader li a:hover {
     color: #ccc;
+    /* text-decoration: underline; */
+    /* border-bottom: 1px solid #ccc; */
     transition: 0.3s;
-}
 
+}
 
 
 
